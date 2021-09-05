@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ClientPlayNetworkHandlerMixin {
     @Inject(method = "onUnloadChunk", at = @At("HEAD"), cancellable = true)
     private void onUnloadChunk(UnloadChunkS2CPacket packet, CallbackInfo info) {
-        if (MinecraftClient.getInstance().player.getChunkPos().getChebyshevDistance(new ChunkPos(packet.getX(), packet.getZ())) > ModConfig.INSTANCE.unloadDistance) {
+        if (MinecraftClient.getInstance().player.getChunkPos().getChebyshevDistance(new ChunkPos(packet.getX(), packet.getZ())) <= ModConfig.INSTANCE.unloadDistance) {
             info.cancel();
         }
     }

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "chunkcacher",
+  "version": "${version}",
+  "name": "ChunkCacher",
+  "description": "Aims to increase the distance at which chunks are kept loaded.",
+  "authors": [
+    "Mattdokn"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/chunkcacher/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.mattdokn.chunkcacher.ChunkCacher"
+    ],
+    "modmenu": [
+      "me.mattdokn.chunkcacher.config.ChunkCacherConfig"
+    ]
+  },
+  "mixins": [
+    "ChunkCacher.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17.1"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": {
+        "id": "chunkcacher",
+        "name": "Chunk Cacher",
+        "description": "Aims to increase the distance at which chunks are kept loaded on the client.",
+        "icon": "assets/chunkcacher/icon.png"
+      }
+    }
+  }
+}

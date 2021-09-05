@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.mattdokn.chunkcacher.mixins",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ClientPlayNetworkHandlerMixin",
+    "GameJoinS2CPacketMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

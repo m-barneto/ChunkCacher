@@ -27,6 +27,10 @@
     "fabric": "*",
     "minecraft": "1.17.1"
   },
+  "suggests": {
+        "clothconfig": "*",
+		"modmenu": "*"
+  },
   "custom": {
     "modmenu": {
       "parent": {

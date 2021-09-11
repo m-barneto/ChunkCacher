@@ -3,6 +3,8 @@ package me.mattdokn.chunkcacher.mixins;
 import me.mattdokn.chunkcacher.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
+import net.minecraft.network.packet.s2c.play.ChunkLoadDistanceS2CPacket;
+import net.minecraft.network.packet.s2c.play.ChunkRenderDistanceCenterS2CPacket;
 import net.minecraft.network.packet.s2c.play.UnloadChunkS2CPacket;
 import net.minecraft.util.math.ChunkPos;
 import org.spongepowered.asm.mixin.Mixin;
@@ -17,5 +19,10 @@ public class ClientPlayNetworkHandlerMixin {
         if (MinecraftClient.getInstance().player.getChunkPos().getChebyshevDistance(new ChunkPos(packet.getX(), packet.getZ())) <= ModConfig.INSTANCE.unloadDistance) {
             info.cancel();
         }
+    }
+
+    @Inject(method = "onChunkLoadDistance", at = @At("HEAD"), cancellable = true)
+    private void onUnloadChunk(ChunkLoadDistanceS2CPacket packet, CallbackInfo info) {
+        info.cancel();
     }
 }

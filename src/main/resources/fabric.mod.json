@@ -8,7 +8,7 @@
     "Mattdokn"
   ],
   "contact": {},
-  "license": "MIT",
+  "license": "GPL-3.0 License",
   "icon": "assets/chunkcacher/icon.png",
   "environment": "client",
   "entrypoints": {

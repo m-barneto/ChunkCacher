@@ -30,15 +30,5 @@
   "suggests": {
         "clothconfig": "*",
 		"modmenu": "*"
-  },
-  "custom": {
-    "modmenu": {
-      "parent": {
-        "id": "chunkcacher",
-        "name": "Chunk Cacher",
-        "description": "Aims to increase the distance at which chunks are kept loaded on the client.",
-        "icon": "assets/chunkcacher/icon.png"
-      }
-    }
   }
 }

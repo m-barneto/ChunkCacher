@@ -28,6 +28,7 @@ public class ModConfig {
 
     public static void loadDefaults() {
         INSTANCE = new ConfigInstance();
+        INSTANCE.unloadDistance = 32;
     }
 
     private static void generateFoldersAndFiles() {

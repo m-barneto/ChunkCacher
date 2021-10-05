@@ -22,7 +22,7 @@ public class ClientPlayNetworkHandlerMixin {
     }
 
     @Inject(method = "onChunkLoadDistance", at = @At("HEAD"), cancellable = true)
-    private void onUnloadChunk(ChunkLoadDistanceS2CPacket packet, CallbackInfo info) {
+    private void onChunkLoadDistance(ChunkLoadDistanceS2CPacket packet, CallbackInfo info) {
         if (packet.getDistance() <= ModConfig.INSTANCE.unloadDistance) {
             info.cancel();
         }

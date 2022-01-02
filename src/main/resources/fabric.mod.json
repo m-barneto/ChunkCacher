@@ -14,21 +14,14 @@
   "entrypoints": {
     "client": [
       "me.mattdokn.chunkcacher.ChunkCacher"
-    ],
-    "modmenu": [
-      "me.mattdokn.chunkcacher.config.ChunkCacherConfig"
     ]
   },
   "mixins": [
     "ChunkCacher.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.11.6",
+    "fabricloader": ">=0.12.12",
     "fabric": "*",
-    "minecraft": "1.17.1"
-  },
-  "suggests": {
-        "clothconfig": "*",
-		"modmenu": "*"
+    "minecraft": "1.18.1"
   }
 }

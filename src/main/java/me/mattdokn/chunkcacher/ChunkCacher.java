@@ -12,7 +12,7 @@ public class ChunkCacher implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ClientTickEvents.END_CLIENT_TICK.register(mc -> {
-            if (mc == null || mc.options == null || mc.world == null || mc.world.getChunkManager() == null) {
+            if (mc == null || mc.options == null) {
                 return;
             }
             ticker++;
@@ -21,8 +21,6 @@ public class ChunkCacher implements ClientModInitializer {
                 if (viewDistance == -1 || mc.options.viewDistance != viewDistance) {
                     // View distance changed
                     viewDistance = mc.options.viewDistance;
-                    // Do something idk
-                    mc.world.getChunkManager().updateLoadDistance(viewDistance);
                 }
             }
         });

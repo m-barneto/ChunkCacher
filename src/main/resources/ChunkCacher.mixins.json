@@ -4,7 +4,8 @@
   "package": "me.mattdokn.chunkcacher.mixins",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ClientPlayNetworkHandlerMixin"
+    "ClientPlayNetworkHandlerMixin",
+    "GameJoinS2CPacketMixin"
   ],
   "client": [
   ],
